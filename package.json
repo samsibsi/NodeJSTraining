@@ -1,8 +1,9 @@
 {
   "name": "nodejstraining",
   "version": "1.0.0",
-  "main": "index.ejs",
+  "main": "express.js",
   "scripts": {
+    "start": "node express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +18,15 @@
   "homepage": "https://github.com/samsibsi/NodeJSTraining#readme",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.5",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.16"
   }
 }

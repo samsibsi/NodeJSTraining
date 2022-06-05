@@ -1,0 +1,12 @@
+
+<%- include ('head'); %>
+<body>
+    <form method="post" action="register" enctype="multipart/form-data">
+        <header><%= title %> </header>
+        name: <input type="text" name="name" /> <br/>
+        last name: <input type="text" name="lname" /> <br/>
+        organize: <input type="text" name="org" /> <br/>
+        profile : <input type="file" name="picture" /> <br/>
+        <button type="submit">Save</button>
+    </form>
+</body>
