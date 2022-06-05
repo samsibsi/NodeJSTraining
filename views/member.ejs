@@ -1,5 +1,7 @@
+<%- include('head') %>
+
 <body>
-    <% for (var  i = 0; users.lenght; i++) {%>
-        name: <%= users[i].name %> <br />
-    <% }%>
+    <% for (let i in users) {%>
+       <a href="/profile/<%=users[i]._id%>"> <%= users[i].Name %> <%= users[i].Lname %> <br /></a>
+    <%  }%>
 </body>

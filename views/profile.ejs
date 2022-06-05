@@ -1,11 +1,17 @@
 <%- include('head') %>
 <body>
-   <p>name: <%=profile.name%></p>
-   <p>lname: <%=profile.lname%></p>
+    <form method="post" action="/updateprofile">
+        <input type="text" name="name" value="<%=profile.Name%>"/>
+        <input type="text" name="lname" value="<%=profile.Lname%>" />
+        <input type="hidden" name="id" value="<%= profile._id %>"> 
+ 
+        <button type="submit">update</button>
+    </form>
 
    <form action="/post" method="post">
        <input type="text" name="post" />
-       <button type="submit">Post!</button>
+       <input type="hidden" name="empid" value="<%= profile._id %>"> 
+       <button type="submit" >Post!</button>
    </form>
 
    <%- include('post', {post:posts}) %>

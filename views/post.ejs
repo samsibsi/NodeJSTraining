@@ -1,4 +1,8 @@
 <body>
-    <p>Post : <%=posts.post%></p>
-    <a href="/deletepost">delete</a>
+    <% for( let i in posts ){ %>
+
+    <p>Post : <%=posts[i].post %></p>
+    <a href="/deletepost/<%= posts[i]._id %>">delete</a>
+
+    <% }%>
 </body>
