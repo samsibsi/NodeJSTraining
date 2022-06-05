@@ -87,8 +87,8 @@ router.post('/updateprofile', async(req, res) =>{
 
     console.log(name, lname)
 
-    let profile = await Profile.findByIdAndUpdate(id , {Name:name, Lname:lname})
-    let url = '/profile/' + profile._id
+    let profile = await Profile.updateOne({_id:id,} , {Name:name, Lname:lname})
+    let url = '/profile/' + id
     res.redirect(url)
 })
 
